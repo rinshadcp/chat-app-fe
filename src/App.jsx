@@ -1,13 +1,13 @@
-import "./App.css";
+import { Outlet } from "react-router-dom";
+import Header from "./components/Header";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <div className="text-xl font-bold text-center m-5  text-red-700">
-        Hello World
-      </div>
-    </>
+    <div>
+      <Header />
+      <Outlet />
+    </div>
   );
-}
+};
 
 export default App;
