@@ -1,7 +1,7 @@
 const Body = () => {
   return (
     <div className="">
-      <div>Hai</div>
+      <div></div>
     </div>
   );
 };
