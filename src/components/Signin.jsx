@@ -1,5 +1,10 @@
 import { useRef, useState } from "react";
 import { validateSigninData } from "../utils/validation";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { auth } from "../utils/firebase";
 
 const Signin = () => {
   const [signIn, setSignin] = useState(true);
@@ -16,6 +21,46 @@ const Signin = () => {
       password.current.value
     );
     setMessage(msg);
+    if (message) return;
+
+    if (!signIn) {
+      //signup logic
+      createUserWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          // Signed up
+          const user = userCredential.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          if (errorCode === "auth/invalid-credential") {
+            setMessage("Invalid Credentials");
+          }
+        });
+    } else {
+      //signin logic
+      signInWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          // const errorMessage = error.message;
+          if (errorCode === "auth/invalid-credential") {
+            setMessage("Invalid Credentials");
+          }
+        });
+    }
   };
 
   const toggleSigninForm = () => {
@@ -62,13 +107,23 @@ const Signin = () => {
         <p className="text-start m-3 font-bold text-red-700 text-lg">
           {message}
         </p>
-        <button
-          className="m-3 p-2 w-9/12    rounded-lg bg-red-600 text-white font-bold"
-          type="submit"
-          onClick={handleSignin}
-        >
-          Sign In
-        </button>
+        {signIn ? (
+          <button
+            className="m-3 p-2 w-9/12    rounded-lg bg-red-600 text-white font-bold"
+            type="submit"
+            onClick={handleSignin}
+          >
+            Sign In
+          </button>
+        ) : (
+          <button
+            className="m-3 p-2 w-9/12    rounded-lg bg-red-600 text-white font-bold"
+            type="submit"
+            onClick={handleSignin}
+          >
+            Sign Up
+          </button>
+        )}
 
         {signIn ? (
           <div className="flex flex-row self-start md:mx-16 m-2">
