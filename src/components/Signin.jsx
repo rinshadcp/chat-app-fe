@@ -19,7 +19,6 @@ const Signin = () => {
   const fullName = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
-  console.log(fullName);
   const handleSignin = () => {
     const msg = validateSigninData(
       !signIn ? fullName.current.value : null,

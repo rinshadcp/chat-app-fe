@@ -7,7 +7,6 @@ import { AVATAR, LOGO } from "../utils/constant";
 const Header = () => {
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
-  console.log(user, "usrrr");
 
   const handleSignout = () => {
     signOut(auth)
