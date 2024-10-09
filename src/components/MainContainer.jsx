@@ -7,11 +7,11 @@ const MainContainer = () => {
   useNowPlayingMovie();
   const nowPlayMovie = useSelector((store) => store.movie?.nowPlayMovie);
   if (nowPlayMovie === null) return;
-  const movie = nowPlayMovie[7];
+  const movie = nowPlayMovie[0];
   const { id, original_title, overview } = movie;
 
   return (
-    <div>
+    <div className="">
       <MovieTitle title={original_title} overview={overview} />
       <MovieVideoBg id={id} />
     </div>

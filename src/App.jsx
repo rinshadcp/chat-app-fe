@@ -23,7 +23,7 @@ const App = () => {
     return () => unsubscribe();
   }, []);
   return (
-    <div>
+    <div className="">
       <Header />
       <Outlet />
     </div>
