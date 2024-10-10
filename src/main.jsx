@@ -7,6 +7,7 @@ import Signin from "./components/Signin.jsx";
 import App from "./App.jsx";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore.js";
+import GptSearchPage from "./components/GptSearchPage.jsx";
 
 const appRouter = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const appRouter = createBrowserRouter([
         element: <Signin />,
       },
       { path: "/browse", element: <Body /> },
+      { path: "/search", element: <GptSearchPage /> },
     ],
   },
 ]);

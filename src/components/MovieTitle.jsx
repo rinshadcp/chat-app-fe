@@ -1,6 +1,6 @@
 const MovieTitle = ({ title, overview }) => {
   return (
-    <div className="w-screen aspect-video pt-[15%] absolute  px-24  bg-gradient-to-r from-black">
+    <div className="w-screen aspect-video pt-[15%] absolute  px-24  bg-gradient-to-r from-black to-transparent">
       <h1 className="text-white text-3xl p-2 font-bold">{title}</h1>
       <p className="text-white p-3  text-lg w-1/4 my-3  ">{overview}</p>
       <div className="flex ">
