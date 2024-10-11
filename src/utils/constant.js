@@ -26,3 +26,11 @@ export const TOP_RATED_MOVIE_URL =
   "https://api.themoviedb.org/3/movie/top_rated";
 
 export const UPCOMING_MOVIE_URL = "https://api.themoviedb.org/3/movie/upcoming";
+export const O_A_KEY = "";
+
+export const languages = [
+  { identifier: "en", Name: "English" },
+  { identifier: "hindi", Name: "Hindi" },
+  { identifier: "spanish", Name: "Spanish" },
+  { identifier: "japanese", Name: "Japanese" },
+];

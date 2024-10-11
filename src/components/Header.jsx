@@ -1,13 +1,16 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { AVATAR, LOGO } from "../utils/constant";
+import { AVATAR, languages, LOGO } from "../utils/constant";
 import UserDropdown from "./UserDropdown";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { updateLang } from "../utils/configSlice";
 
 const Header = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const user = useSelector((store) => store.user);
   const [showProfile, setShowProfile] = useState(false);
@@ -25,6 +28,10 @@ const Header = () => {
     setShowProfile(!showProfile);
   };
 
+  const handleLang = (e) => {
+    dispatch(updateLang(e.target.value));
+  };
+
   return (
     <div className="flex justify-between absolute z-10 top-0 w-full left-0 bg-gradient-to-b from-black to-transparent">
       <div className="">
@@ -39,8 +46,24 @@ const Header = () => {
       {user && (
         <div>
           <div className="flex h-14 my-5 mx-3 pr-8 ">
+            {location.pathname === "/search" && (
+              <select
+                className="bg-gray-500 mb-2 rounded-lg p-2 font-bold"
+                onChange={handleLang}
+              >
+                {languages.map((lang) => (
+                  <option
+                    className=""
+                    key={lang.identifier}
+                    value={lang.identifier}
+                  >
+                    {lang.Name}
+                  </option>
+                ))}
+              </select>
+            )}
             <Link to="/search">
-              <button className="bg-purple-600 mx-4 mb-3  p-3 rounded-2xl font-bold shadow-md">
+              <button className="bg-purple-600 mx-4 mb-3  p-3 rounded-lg font-bold shadow-md">
                 GPT Search
               </button>
             </Link>
