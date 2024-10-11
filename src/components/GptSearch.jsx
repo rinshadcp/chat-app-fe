@@ -1,4 +1,10 @@
+import { useRef } from "react";
+import useGptResponse from "../hooks/useGptResponse";
+
 const GptSearch = () => {
+  const input = useRef("");
+  console.log(input);
+
   return (
     <div className="  ">
       <div className="flex flex-col">
@@ -12,11 +18,15 @@ const GptSearch = () => {
       </div>
       <div>
         <input
+          ref={input}
           className="rounded-lg p-3 my-2 w-9/12  bg-gray-600 opacity-80 "
           type="text"
           placeholder="Type a movie description here..."
         />
-        <button className="w-2/12 p-3 my-2 mx-6 text-white rounded-lg bg-red-600">
+        <button
+          onClick={useGptResponse(input)}
+          className="w-2/12 p-3 my-2 mx-6 text-white rounded-lg bg-red-600"
+        >
           Search
         </button>
       </div>

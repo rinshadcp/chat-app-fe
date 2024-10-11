@@ -13,6 +13,7 @@
     "@firebasegen/default": "file:generated/javascript/default",
     "@reduxjs/toolkit": "^2.2.7",
     "firebase": "^10.14.0",
+    "openai": "^4.67.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.1.2",
