@@ -21,9 +21,10 @@ Before you begin, ensure you have the following installed on your machine:
 
 ### 1. Clone the Repository
 
-````bash
-git clone https://github.com/rinshadcp/netflix-gpt.git
+   ````bash
+   git clone https://github.com/rinshadcp/netflix-gpt.git
 
+   ````
 
 ### Frontend (FE) Setup
 
@@ -32,7 +33,7 @@ git clone https://github.com/rinshadcp/netflix-gpt.git
    ```bash
    cd netflix-gpt
 
-````
+   ````
 
 2. **Install**
 
