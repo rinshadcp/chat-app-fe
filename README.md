@@ -7,7 +7,7 @@ Netflix GPT is a web application built using **React + Vite** that combines the 
 - **User Authentication with Firebase**: Sign up, login, and logout using Firebase Authentication (supports Google and email/password).
 - **Netflix-style UI**: Display popular, trending, and top-rated movies in a slick, Netflix-inspired UI.
 - **GPT-Powered Movie Search**: Search for related movies using GPT. Type in a movie like "3 Idiots" and get recommendations for similar films.
-- **Movie Categories**: Browse movies by genre, including action, comedy, drama, and more.
+- **Movie Categories**: Browse movies by genre, including now playing, popular, top rated, and more.
 - **Responsive Design**: Works seamlessly on desktops, tablets, and mobile devices.
 
 ## Prerequisites
