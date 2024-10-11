@@ -8,11 +8,13 @@ import App from "./App.jsx";
 import { Provider } from "react-redux";
 import appStore from "./utils/store/appStore.js";
 import GptSearchPage from "./components/gpt/GptSearchPage.jsx";
+import ErrorPage from "./components/ErrorPage.jsx";
 
 const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
