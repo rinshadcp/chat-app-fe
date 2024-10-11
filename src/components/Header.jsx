@@ -13,6 +13,7 @@ const Header = () => {
   const location = useLocation();
 
   const user = useSelector((store) => store.user);
+  const selectedLanguage = useSelector((store) => store.config.lang);
   const [showProfile, setShowProfile] = useState(false);
   const handleSignout = () => {
     signOut(auth);
@@ -50,6 +51,7 @@ const Header = () => {
               <select
                 className="bg-gray-500 mb-2 rounded-lg p-2 md:font-bold w-16   md:w-36"
                 onChange={handleLang}
+                value={selectedLanguage}
               >
                 {languages.map((lang) => (
                   <option

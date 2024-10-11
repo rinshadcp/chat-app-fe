@@ -26,7 +26,7 @@ const Signin = () => {
       password.current.value
     );
     setMessage(msg);
-    if (message) return;
+    if (msg) return;
 
     if (!signIn) {
       //signup logic
