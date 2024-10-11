@@ -5,7 +5,7 @@ import { AVATAR, languages, LOGO } from "../utils/constant";
 import UserDropdown from "./UserDropdown";
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { updateLang } from "../utils/configSlice";
+import { updateLang } from "../hooks/configSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
