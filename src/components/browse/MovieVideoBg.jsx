@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import useTrailerInfo from "../hooks/useTrailerInfo";
+import useTrailerInfo from "../../hooks/useTrailerInfo";
 
 const MovieVideoBg = ({ id }) => {
   useTrailerInfo(id);

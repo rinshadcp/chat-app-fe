@@ -1,4 +1,4 @@
-import { IMG_CDN_LINK } from "../utils/constant";
+import { IMG_CDN_LINK } from "../../utils/constant";
 
 const MovieCard = ({ imgPath }) => {
   if (!imgPath) return null;

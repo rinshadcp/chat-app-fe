@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { POPULAR_MOVIE_URL, options } from "../utils/constant";
 import { useDispatch } from "react-redux";
-import { addPopularMovie } from "../utils/movieSlice";
+import { addPopularMovie } from "../utils/store/movieSlice";
 const usePopularMovies = () => {
   const dispatch = useDispatch();
   useEffect(() => {

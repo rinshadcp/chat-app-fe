@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 import { signOut } from "firebase/auth";
-import { auth } from "../utils/firebase";
-import { AVATAR, languages, LOGO } from "../utils/constant";
+import { auth } from "../../utils/firebase";
+import { AVATAR, languages, LOGO } from "../../utils/constant";
 import UserDropdown from "./UserDropdown";
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { updateLang } from "../hooks/configSlice";
+import { updateLang } from "../../utils/store/configSlice";
 
 const Header = () => {
   const dispatch = useDispatch();

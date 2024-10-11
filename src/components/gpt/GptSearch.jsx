@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { useSelector } from "react-redux";
-import language from "../utils/languageConstants";
-import useGptResponse from "../hooks/useGptResponse";
+import language from "../../utils/languageConstants";
+import useGptResponse from "../../hooks/useGptResponse";
 
 const GptSearch = () => {
   const input = useRef("");

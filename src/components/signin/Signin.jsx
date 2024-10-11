@@ -1,14 +1,14 @@
 import { useRef, useState } from "react";
-import { validateSigninData } from "../utils/validation";
+import { validateSigninData } from "../../utils/validation";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import { auth } from "../utils/firebase";
+import { auth } from "../../utils/firebase";
 import { useDispatch } from "react-redux";
-import { addUser } from "../utils/userSlice";
-import { BG_IMG,  } from "../utils/constant";
+import { addUser } from "../../utils/store/userSlice";
+import { BG_IMG } from "../../utils/constant";
 
 const Signin = () => {
   const [signIn, setSignin] = useState(true);
@@ -84,11 +84,7 @@ const Signin = () => {
   };
   return (
     <div className="relative h-screen w-full">
-      <img
-        className="w-full "
-        src={BG_IMG}
-        alt="bg"
-      />
+      <img className="w-full " src={BG_IMG} alt="bg" />
       <form
         onSubmit={(e) => {
           e.preventDefault();

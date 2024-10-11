@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import userSlice from "./userSlice";
 import movieSlice from "./movieSlice";
-import configSlice from "../hooks/configSlice";
+import configSlice from "./configSlice";
 import gptSlice from "./gptSlice";
 
 const appStore = configureStore({

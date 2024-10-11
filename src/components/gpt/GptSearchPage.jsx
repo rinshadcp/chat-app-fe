@@ -1,4 +1,4 @@
-import { BG_IMG } from "../utils/constant";
+import { BG_IMG } from "../../utils/constant";
 import GptMovieSuggestion from "./GptMovieSuggestion";
 import GptSearch from "./GptSearch";
 

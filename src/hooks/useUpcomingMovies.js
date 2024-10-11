@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { UPCOMING_MOVIE_URL, options } from "../utils/constant";
 import { useDispatch } from "react-redux";
-import { addUpcomingMovie } from "../utils/movieSlice";
+import { addUpcomingMovie } from "../utils/store/movieSlice";
 
 const useUpcomingMovies = () => {
   const dispatch = useDispatch();

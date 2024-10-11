@@ -1,7 +1,7 @@
 import MovieTitle from "./MovieTitle";
 import MovieVideoBg from "./MovieVideoBg";
 import { useSelector } from "react-redux";
-import useNowPlayingMovie from "../hooks/useNowPlayingMovie";
+import useNowPlayingMovie from "../../hooks/useNowPlayingMovie";
 
 const MainContainer = () => {
   useNowPlayingMovie();

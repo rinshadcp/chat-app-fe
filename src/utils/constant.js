@@ -26,7 +26,7 @@ export const TOP_RATED_MOVIE_URL =
   "https://api.themoviedb.org/3/movie/top_rated";
 
 export const UPCOMING_MOVIE_URL = "https://api.themoviedb.org/3/movie/upcoming";
-export const O_A_KEY = "";
+export const O_A_KEY = process.env.REACT_APP_O_A_KEY;
 
 export const languages = [
   { identifier: "en", Name: "English" },
@@ -35,5 +35,5 @@ export const languages = [
   { identifier: "japanese", Name: "Japanese" },
 ];
 
-
-export const  MOVIE_SEARCH_URL ="https://api.themoviedb.org/3/search/movie?query="
+export const MOVIE_SEARCH_URL =
+  "https://api.themoviedb.org/3/search/movie?query=";
