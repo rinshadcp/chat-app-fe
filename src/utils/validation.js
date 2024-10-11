@@ -4,9 +4,7 @@ export const validateSigninData = (fullName, email, password) => {
     /^(?=.*d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(password);
   const isFullNameValid =
     fullName !== null
-      ? /(^[A-Za-z]{3,16})([ ]{0,1})([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})/.test(
-          fullName
-        )
+      ? /^[A-Za-z]{3,16}( [A-Za-z]{3,16}){0,3}$/.test(fullName)
       : true;
 
   if (!isFullNameValid) return "Full name is not valid";
