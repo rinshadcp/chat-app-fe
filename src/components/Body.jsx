@@ -1,5 +1,5 @@
-import MainContainer from "./MainContainer";
-import SecondContainer from "./SecondContainer";
+import MainContainer from "./browse/MainContainer";
+import SecondContainer from "./browse/SecondContainer";
 
 const Body = () => {
   return (

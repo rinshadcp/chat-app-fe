@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 import { signOut } from "firebase/auth";
-import { auth } from "../../utils/firebase";
-import { AVATAR, languages, LOGO } from "../../utils/constant";
-import UserDropdown from "./UserDropdown";
+import { auth } from "../utils/firebase";
+import { AVATAR, languages, LOGO } from "../utils/constant";
+import UserDropdown from "./signin/UserDropdown";
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { updateLang } from "../../utils/store/configSlice";
+import { updateLang } from "../utils/store/configSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -37,7 +37,7 @@ const Header = () => {
       <div className="">
         <Link to="/browse">
           <img
-            className="w-32 sm:w-42 md:w-52  mx-28 sm:mx-56 md:mx-80  my-2 p-2  "
+            className="w-32  md:w-52  mx-auto  md:mx-80  my-2 p-2  "
             src={LOGO}
             alt="logo"
           ></img>
@@ -48,7 +48,7 @@ const Header = () => {
           <div className="flex h-14 my-5 mx-3 pr-8 ">
             {location.pathname === "/search" && (
               <select
-                className="bg-gray-500 mb-2 rounded-lg p-2 font-bold"
+                className="bg-gray-500 mb-2 rounded-lg p-2 md:font-bold w-16   md:w-36"
                 onChange={handleLang}
               >
                 {languages.map((lang) => (
@@ -63,15 +63,19 @@ const Header = () => {
               </select>
             )}
             <Link to="/search">
-              <button className="bg-purple-600 mx-4 mb-3  p-3 rounded-lg font-bold shadow-md">
+              <button className="bg-purple-600 mx-4 mb-3 p-2 md:p-3 rounded-lg  md:font-bold shadow-md w-18  md:w-36">
                 GPT Search
               </button>
             </Link>
             <div className="">
-              <img src={AVATAR} alt="usericon" className="   w-10 rounded-lg" />
+              <img
+                src={AVATAR}
+                alt="usericon"
+                className="   w-10 rounded-lg "
+              />
             </div>
             <div className="cursor-pointer" onClick={showUserProfile}>
-              <img className="w-6 my-2 mx-2" src="/dropdown.svg" />
+              <img className="w-4 md:w-6 my-2 mx-2" src="/dropdown.svg" />
             </div>
           </div>
           {showProfile && (

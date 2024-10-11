@@ -7,7 +7,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../../utils/firebase";
 import { useDispatch } from "react-redux";
-import { addUser } from "../../utils/store/userSlice";
+import { addUser } from "../../utils/userSlice";
 import { BG_IMG } from "../../utils/constant";
 
 const Signin = () => {
@@ -83,13 +83,15 @@ const Signin = () => {
     setSignin(!signIn);
   };
   return (
-    <div className="relative h-screen w-full">
-      <img className="w-full " src={BG_IMG} alt="bg" />
+    <div className="relative min-h-screen">
+      <div className="absolute -z-10 inset-0 ">
+        <img className="w-full h-full object-cover  " src={BG_IMG} alt="bg" />
+      </div>
       <form
         onSubmit={(e) => {
           e.preventDefault();
         }}
-        className="absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-10 flex items-center justify-center flex-col  rounded-lg w-9/12  sm:w-6/12 md:w-4/12  bg-black/75"
+        className="absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:p-10 flex items-center justify-center flex-col  rounded-lg w-10/12   md:w-4/12  bg-black/75"
       >
         <h1 className=" self-start text-white font-bold text-2xl  md:mx-10 p-4">
           {signIn ? "Sign In" : "Sign Up"}

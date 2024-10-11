@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { MOVIE_SEARCH_URL, options } from "../utils/constant";
 import client from "../utils/openai";
-import { updateMovieDetails } from "../utils/store/gptSlice";
+import { updateMovieDetails } from "../utils/gptSlice";
 import { useEffect } from "react";
 
 const useGptResponse = (userQuery) => {

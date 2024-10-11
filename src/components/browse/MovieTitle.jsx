@@ -1,12 +1,14 @@
 const MovieTitle = ({ title, overview }) => {
   return (
-    <div className="w-screen aspect-video pt-[15%] absolute  px-24  bg-gradient-to-r from-black to-transparent">
-      <h1 className="text-white text-3xl p-2 font-bold">{title}</h1>
-      <p className="text-white p-3  text-lg w-1/4 my-3  ">{overview}</p>
+    <div className="w-screen aspect-video pt-[30%] md:pt-[15%] absolute px-2 md:px-24  bg-gradient-to-r from-black to-transparent">
+      <h1 className="text-white text-lg md:text-3xl p-2 font-bold">{title}</h1>
+      <p className="text-white p-3  text-lg w-1/4 my-3 hidden md:inline-block ">
+        {overview}
+      </p>
       <div className="flex ">
-        <div className="flex justify-center items-center rounded-lg bg-white bg-opacity-80 p-3 m-2 hover:bg-opacity-70 hover:cursor-pointer">
+        <div className="flex justify-center items-center rounded-lg bg-white bg-opacity-80 md:p-3 m-2 hover:bg-opacity-70 hover:cursor-pointer">
           <svg
-            className="w-10 "
+            className="md:w-10  w-5"
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
             y="0px"
@@ -16,9 +18,9 @@ const MovieTitle = ({ title, overview }) => {
           </svg>
           <h1 className="text-center font-bold  p-2">Play</h1>
         </div>
-        <div className="flex justify-center items-center rounded-lg bg-gray-600   bg-opacity-90 p-3 m-2 hover:bg-opacity-70 hover:cursor-pointer">
+        <div className="flex justify-center items-center rounded-lg bg-gray-600   bg-opacity-90  md:p-3 m-2 hover:bg-opacity-70 hover:cursor-pointer">
           <svg
-            className="w-10"
+            className="md:w-10 w-5"
             fill="#FFFFFF"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 128 128"

@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Body from "./components/browse/Body.jsx";
+import Body from "./components/Body.jsx";
 import Signin from "./components/signin/Signin.jsx";
 import App from "./App.jsx";
 import { Provider } from "react-redux";

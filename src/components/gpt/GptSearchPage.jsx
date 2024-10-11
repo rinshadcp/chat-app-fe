@@ -4,12 +4,14 @@ import GptSearch from "./GptSearch";
 
 const GptSearchPage = () => {
   return (
-    <div className="bg-gradient-to-b from-black w-full h-auto">
-      <div className="-z-10 fixed ">
-        <img className="w-full  " src={BG_IMG} alt="" />
+    <div className="relative min-h-screen">
+      <div className="absolute -z-10 inset-0 ">
+        <img className="w-full h-full object-cover  " src={BG_IMG} alt="" />
       </div>
-      <GptSearch />
-      <GptMovieSuggestion />
+      <div className=" relative  bg-gradient-to-b from-black min-h-screen">
+        <GptSearch />
+        <GptMovieSuggestion />
+      </div>
     </div>
   );
 };
