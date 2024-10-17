@@ -33,16 +33,23 @@ const Header = () => {
     dispatch(updateLang(e.target.value));
   };
 
+  const handleLogoClick = () => {
+    if (user) {
+      navigate("/browse");
+    } else {
+      navigate("/");
+    }
+  };
+
   return (
     <div className="flex justify-between absolute z-10 top-0 w-full left-0 bg-gradient-to-b from-black to-transparent">
       <div className="">
-        <Link to="/browse">
-          <img
-            className="w-32  md:w-52  mx-auto  md:mx-80  my-2 p-2  "
-            src={LOGO}
-            alt="logo"
-          ></img>
-        </Link>
+        <img
+          className="w-32  md:w-52  mx-auto  md:mx-80  my-2 p-2  "
+          src={LOGO}
+          alt="logo"
+          onClick={handleLogoClick}
+        ></img>
       </div>
       {user && (
         <div>
