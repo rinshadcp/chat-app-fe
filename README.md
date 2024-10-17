@@ -1,5 +1,9 @@
 # Netflix GPT
 
+## Live Demo
+You can view the live application [here](https://netflixgpt-786.web.app/).
+
+## Description
 Netflix GPT is a web application built using **React + Vite** that combines the functionality of Netflix-like movie browsing and Firebase-based authentication with a GPT-powered movie search. Users can log in, browse movies, search for related movies (e.g., "3 Idiots like film"), and get movie recommendations using GPT.
 
 ## Features
